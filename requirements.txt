@@ -1,13 +1,22 @@
-pandas
+# --- Core ---
+streamlit>=1.40.0
+pandas>=2.0.0
 numpy
 openpyxl
 xlrd
+
+# --- Visualização ---
+plotly>=5.18.0
 matplotlib
 seaborn
-google-generativeai
+# O Streamlit já instala o Altair correto, mas se precisar forçar:
+altair>=5.0.0
+
+# --- IA e Backend ---
+google-generativeai>=0.8.0
 python-dotenv
-streamlit
-plotly
+fpdf
+
+# --- Jupyter (Dev Local) ---
 jupyter
 ipykernel
-fpdf

@@ -43,7 +43,7 @@ head1, head2 = st.columns([1.5, 4.5])
 
 with head1:
     # Logo Paracambi MAIOR
-    st.image("https://paracambi.rj.gov.br/wp-content/uploads/2025/07/Paracambi-flat.png", use_container_width=True)
+    st.image("https://raw.githubusercontent.com/amaro-netto/rio-transparencia/ce4b2dac8c9f4bafe8f5c2053f4e32db5323509a/data/logo.svg", use_container_width=True)
 
 with head2:
     st.title("Painel de Inteligência e Conformidade Pública")
@@ -126,7 +126,7 @@ def gerar_pdf_laudo(dataframe):
         
         pdf.ln(5) # Espaço entre itens
 
-    return pdf.output(dest="S").encode("latin-1")
+    return bytes(pdf.output(dest="S"))
 
 # ==========================================
 # 5. KPIs E GRÁFICOS (MANTIDOS)
